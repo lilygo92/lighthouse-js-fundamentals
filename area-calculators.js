@@ -2,7 +2,7 @@ const calculateCircleArea = (r) => {
   if (r <= 0){
     return undefined;
   }
-  return (Math.pow(r, 2)*Math.PI);
+  return (Math.pow(r , 2) *Math.PI);
 }
 const calculateRectangleArea = (h , l) => {
   if (h <= 0 || l <= 0){
