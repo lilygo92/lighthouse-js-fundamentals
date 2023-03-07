@@ -1,24 +1,23 @@
-const checkAir = function (samples, threshold) {
+const checkAir = function(samples, threshold) {
   let dirtySample = 0;
 
   // loop through samples array
-  for (i = 0 ; i < samples.length ; i++){
+  for (let i = 0; i < samples.length; i++) {
 
     // find the amount of dirty in samples
-    if (samples[i] == "dirty"){
+    if (samples[i] === "dirty") {
       dirtySample += 1;
     }
   }
-    // divide by total length of samples
-    let pollutionLevel = (dirtySample / (samples.length));
+  // divide by total length of samples
+  let pollutionLevel = (dirtySample / (samples.length));
 
-    // conditional to check against threshold
-    if (pollutionLevel > threshold){
-      return "Polluted";
+  // conditional to check against threshold
+  if (pollutionLevel > threshold) {
+    return "Polluted";
+  }
 
-    } 
-
-  return "Clean"; 
+  return "Clean";
 };
 
 console.log(checkAir(
@@ -34,4 +33,4 @@ console.log(checkAir(
 console.log(checkAir(
   ['clean', 'dirty', 'clean', 'dirty', 'clean', 'dirty', 'clean'],
   0.9
-)) // Clean
+)); // Clean
